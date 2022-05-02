@@ -1,0 +1,22 @@
+# git-friendly bashrc prompt
+NORMAL=$(tput sgr0)
+txtblk='\[\e[0;30m\]' # black
+txtred='\[\e[0;31m\]' # red
+txtgrn='\[\e[0;32m\]' # green
+txtylw='\[\e[0;33m\]' # yellow
+txtblu='\[\e[0;34m\]' # blue
+txtpur='\[\e[0;35m\]' # purple
+txtcyn='\[\e[0;36m\]' # cyan
+txtwht='\[\e[0;37m\]' # white
+txtrst='\[\e[0m\]'    # text reset
+export PROMPT_COMMAND='RET=$?;\
+	BRANCH="";\
+	ERRMSG="";\
+	if [[ $RET != 0 ]]; then\
+		ERRMSG=" $RET";\
+	fi;\
+	if git branch 2> /dev/null !>/dev/null; then\
+		BRANCH=[$(git branch 2>/dev/null | grep \* | cut -d " " -f 2)];\
+	fi;
+	DATE=[$(date +"%T")]
+PS1="$txtcyn\h $txtwht\W $txtgrn$DATE$txtred$ERRMSG \$ $txtrst";'
