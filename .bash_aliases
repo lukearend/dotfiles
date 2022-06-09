@@ -1,16 +1,32 @@
 # Imported by .bashrc.
 
 # git shortcuts
-alias gs="git status"
-alias ga="git add"
-alias gc="git commit -m"
-alias gr="git rebase --interactive"
-alias gb="git branch"
-alias gch="git checkout"
-alias gcb="git checkout -b"
-alias gpl="git pull"
-alias gps="git push"
-alias gpu="git push -u origin $(git branch --show-current)"
+alias ga='git add'
+alias gaa='git add .'
+alias gaaa='git add --all'
+alias gau='git add --update'
+alias gb='git branch'
+alias gbd='git branch --delete '
+alias gc='git commit'
+alias gcm='git commit --message'
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gcom='git checkout master'
+alias gd='git diff'
+alias gda='git diff HEAD'
+alias gi='git init'
+alias gm='git merge'
+alias gp='git pull'
+alias gr='git rebase'
+alias gs='git status'
+alias gst='git stash'
+alias gsta='git stash apply'
+alias gstl='git stash list'
+
+function ghelp() {
+    echo 'git shortcuts:'
+    grep '^alias g' ~/.bash_aliases | grep "'git "
+}
 
 # fancy cd with ls
 function cd() {
@@ -24,8 +40,3 @@ function cd() {
 # improve ls
 alias ls='ls -GFh'
 alias la='ls -A'
-
-# aliases specific to this machine
-if [ -f ~/.bash_aliases_local ]; then
-  . ~/.bash_aliases_local
-fi
