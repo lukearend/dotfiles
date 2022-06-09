@@ -1,3 +1,5 @@
+# Imported by .bashrc
+
 # git-friendly bashrc prompt
 NORMAL=$(tput sgr0)
 txtblk='\[\e[0;30m\]' # black

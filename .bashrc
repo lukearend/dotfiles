@@ -1,4 +1,7 @@
-# Executed when a bash shell is acquired.
+# Executed at the start of each new bash shell.
+# This bashrc should remain compatible with both macOS and Linux.
+# Any overrides or extra bash settings for the local machine
+# should be placed in ~/.bashrc_local.
 
 # Do not warn about using bash as default shell instead of zshrc.
 export BASH_SILENCE_DEPRECATION_WARNING=1
@@ -7,26 +10,22 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 export EDITOR=vim
 set -o vi
 
-# Improve ls commands.
-alias ls='ls -GFh'
-alias la='ls -A'
-
 # If available, add bash completion.
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # If available, add git completion.
 if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
+    source ~/.git-completion.bash
 fi
 
 # Import aliases.
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+    source ~/.bash_aliases
 fi
 
 # Import command prompt.
 if [ -f ~/.bash_prompt ]; then
-    . ~/.bash_prompt
+    source ~/.bash_prompt
 fi
 
 # Enable command `subl` to open Sublime Text from the CLI.
@@ -54,3 +53,8 @@ export PS1="\[\e[1;32m\]\W\[\e[m\] \\$ "
 HISTCONTROL=ignoreboth
 HISTSIZE=1000
 HISTFILESIZE=2000
+
+# Import bash settings specific to this machine.
+if [ -f ~/.bashrc_local ]; then
+    source ~/.bashrc_local
+fi
