@@ -36,6 +36,28 @@ alias gst='git stash'
 alias gsta='git stash apply'
 alias gstl='git stash list'
 
+type __git_complete >/dev/null 2>&1 && {
+    __git_complete ga   _git_add
+    __git_complete gau  _git_add
+    __git_complete gb   _git_branch
+    __git_complete gbd  _git_branch
+    __git_complete gc   _git_commit
+    __git_complete gcm  _git_commit
+    __git_complete gco  _git_checkout
+    __git_complete gcob _git_checkout
+    __git_complete gcom _git_checkout
+    __git_complete gd   _git_diff
+    __git_complete gda  _git_diff
+    __git_complete gi   _git_init
+    __git_complete gm   _git_merge
+    __git_complete gp   _git_pull
+    __git_complete gr   _git_rebase
+    __git_complete gs   _git_status
+    __git_complete gst  _git_stash
+    __git_complete gsta _git_stash
+    __git_complete gstl _git_stash
+}
+
 function ghelp() {
     echo 'git shortcuts:'
     grep '^alias g' ~/.bash_aliases | grep "'git "
