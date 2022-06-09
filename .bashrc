@@ -15,7 +15,7 @@ if [ -r /usr/local/etc/profile.d/bash_completion.sh ]; then
     source /usr/local/etc/profile.d/bash_completion.sh
 fi
 
-# If available, add git completion.
+# Add git completion.
 if [ -f ~/.git-completion.bash ]; then
     source ~/.git-completion.bash
 fi

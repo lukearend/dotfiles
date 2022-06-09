@@ -40,3 +40,8 @@ function ghelp() {
     echo 'git shortcuts:'
     grep '^alias g' ~/.bash_aliases | grep "'git "
 }
+
+# import any aliases specific to this machine
+if [ -f ~/.bash_aliases_local ]; then
+    source ~/.bash_aliases_local
+fi
