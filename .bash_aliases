@@ -1,5 +1,18 @@
 # Imported by .bashrc.
 
+# fancy cd
+function cd() {
+    new_directory="$*";
+    if [ $# -eq 0 ]; then 
+        new_directory=${HOME};
+    fi;
+    builtin cd "${new_directory}" && ls
+}
+
+# improved ls
+alias ls='ls -GFh'
+alias la='ls -A'
+
 # git shortcuts
 alias ga='git add'
 alias gaa='git add .'
@@ -27,16 +40,3 @@ function ghelp() {
     echo 'git shortcuts:'
     grep '^alias g' ~/.bash_aliases | grep "'git "
 }
-
-# fancy cd with ls
-function cd() {
-    new_directory="$*";
-    if [ $# -eq 0 ]; then 
-        new_directory=${HOME};
-    fi;
-    builtin cd "${new_directory}" && ls
-}
-
-# improve ls
-alias ls='ls -GFh'
-alias la='ls -A'
