@@ -36,7 +36,6 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 # Prevent homebrew from using Google Analytics to track behavior.
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_INSECURE_REDIRECT=1
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # Unset PYTHONPATH, running python in a venv is preferred.
 unset PYTHONPATH
