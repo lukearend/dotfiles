@@ -2,6 +2,8 @@ let mapleader = " "
 nnoremap <SPACE> <Nop>
 
 imap jk <Esc>
+
+nmap E $
 nmap Z i<Cr><Esc>
 
 set backspace=indent,eol,start

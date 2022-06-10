@@ -35,6 +35,7 @@ alias gs='git status'
 alias gst='git stash'
 alias gsta='git stash apply'
 alias gstl='git stash list'
+alias gl='git log'
 
 type __git_complete >/dev/null 2>&1 && {
     __git_complete ga   _git_add
@@ -56,6 +57,7 @@ type __git_complete >/dev/null 2>&1 && {
     __git_complete gst  _git_stash
     __git_complete gsta _git_stash
     __git_complete gstl _git_stash
+    __git_complete gl   _git_log
 }
 
 function ghelp() {
