@@ -20,16 +20,18 @@ alias gaa='git add .'
 alias gaaa='git add --all'
 alias gau='git add --update'
 alias gb='git branch'
-alias gbd='git branch --delete '
+alias gbr='git branch --remote'
+alias gbd='git branch --delete'
 alias gc='git commit'
 alias gcm='git commit --message'
 alias gco='git checkout'
 alias gcob='git checkout -b'
 alias gcom='git checkout master'
 alias gd='git diff'
-alias gda='git diff HEAD'
+alias gdh='git diff HEAD'
 alias gi='git init'
 alias gm='git merge'
+alias gf='git fetch'
 alias gp='git pull'
 alias gr='git rebase'
 alias gs='git status'
@@ -44,6 +46,7 @@ type __git_complete >/dev/null 2>&1 && {
     __git_complete ga   _git_add
     __git_complete gau  _git_add
     __git_complete gb   _git_branch
+    __git_complete gbr  _git_branch
     __git_complete gbd  _git_branch
     __git_complete gc   _git_commit
     __git_complete gcm  _git_commit
@@ -51,9 +54,10 @@ type __git_complete >/dev/null 2>&1 && {
     __git_complete gcob _git_checkout
     __git_complete gcom _git_checkout
     __git_complete gd   _git_diff
-    __git_complete gda  _git_diff
+    __git_complete gdh  _git_diff
     __git_complete gi   _git_init
     __git_complete gm   _git_merge
+    __git_complete gf   _git_fetch
     __git_complete gp   _git_pull
     __git_complete gr   _git_rebase
     __git_complete gs   _git_status
