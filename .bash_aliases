@@ -35,6 +35,7 @@ alias gm='git merge'
 alias gf='git fetch'
 alias gp='git pull'
 alias gr='git rebase'
+alias gri='git rebase --interactive'
 alias gs='git status'
 alias gst='git stash'
 alias gsta='git stash apply'
@@ -62,6 +63,7 @@ type __git_complete >/dev/null 2>&1 && {
     __git_complete gf   _git_fetch
     __git_complete gp   _git_pull
     __git_complete gr   _git_rebase
+    __git_complete gri  _git_rebase
     __git_complete gs   _git_status
     __git_complete gst  _git_stash
     __git_complete gsta _git_stash
