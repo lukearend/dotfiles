@@ -30,12 +30,14 @@ alias gcom='git checkout master'
 alias gcot='git checkout --track'
 alias gd='git diff'
 alias gdh='git diff HEAD'
+alias gr='git reset'
+alias grh='git reset --hard'
 alias gi='git init'
 alias gm='git merge'
 alias gf='git fetch'
 alias gp='git pull'
-alias gr='git rebase'
-alias gri='git rebase --interactive'
+alias grb='git rebase'
+alias grbi='git rebase --interactive'
 alias gs='git status'
 alias gst='git stash'
 alias gsta='git stash apply'
@@ -58,12 +60,14 @@ type __git_complete >/dev/null 2>&1 && {
     __git_complete gcot _git_checkout
     __git_complete gd   _git_diff
     __git_complete gdh  _git_diff
+    __git_complete gr   _git_reset
+    __git_complete grh  _git_reset
     __git_complete gi   _git_init
     __git_complete gm   _git_merge
     __git_complete gf   _git_fetch
     __git_complete gp   _git_pull
-    __git_complete gr   _git_rebase
-    __git_complete gri  _git_rebase
+    __git_complete grb  _git_rebase
+    __git_complete grbi _git_rebase
     __git_complete gs   _git_status
     __git_complete gst  _git_stash
     __git_complete gsta _git_stash
