@@ -27,6 +27,7 @@ alias gcm='git commit --message'
 alias gco='git checkout'
 alias gcob='git checkout -b'
 alias gcom='git checkout master'
+alias gcot='git checkout --track'
 alias gd='git diff'
 alias gdh='git diff HEAD'
 alias gi='git init'
@@ -53,6 +54,7 @@ type __git_complete >/dev/null 2>&1 && {
     __git_complete gco  _git_checkout
     __git_complete gcob _git_checkout
     __git_complete gcom _git_checkout
+    __git_complete gcot _git_checkout
     __git_complete gd   _git_diff
     __git_complete gdh  _git_diff
     __git_complete gi   _git_init
