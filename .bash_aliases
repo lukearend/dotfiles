@@ -14,6 +14,7 @@ alias ls='ls -GFh'
 alias la='ls -A'
 
 # git shortcuts
+alias gl='git log'
 alias ga='git add'
 alias gaa='git add .'
 alias gaaa='git add --all'
@@ -35,9 +36,11 @@ alias gs='git status'
 alias gst='git stash'
 alias gsta='git stash apply'
 alias gstl='git stash list'
-alias gl='git log'
+alias gpu='git push'
+alias gpuu='git push -u'
 
 type __git_complete >/dev/null 2>&1 && {
+    __git_complete gl   _git_log
     __git_complete ga   _git_add
     __git_complete gau  _git_add
     __git_complete gb   _git_branch
@@ -57,7 +60,8 @@ type __git_complete >/dev/null 2>&1 && {
     __git_complete gst  _git_stash
     __git_complete gsta _git_stash
     __git_complete gstl _git_stash
-    __git_complete gl   _git_log
+    __git_complete gpu  _git_push
+    __git_complete gpuu _git_push
 }
 
 function ghelp() {
