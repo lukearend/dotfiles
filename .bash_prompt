@@ -1,6 +1,6 @@
 # Imported by .bashrc
 
-# git-friendly bashrc prompt
+# custom bashrc prompt
 NORMAL=$(tput sgr0)
 txtblk='\[\e[0;30m\]' # black
 txtred='\[\e[0;31m\]' # red
@@ -11,6 +11,7 @@ txtpur='\[\e[0;35m\]' # purple
 txtcyn='\[\e[0;36m\]' # cyan
 txtwht='\[\e[0;37m\]' # white
 txtrst='\[\e[0m\]'    # text reset
+WINDOWTITLE='\033]0;${PWD##*/}\007'
 export PROMPT_COMMAND='RET=$?;\
 	BRANCH="";\
 	ERRMSG="";\
@@ -21,4 +22,4 @@ export PROMPT_COMMAND='RET=$?;\
 		BRANCH=[$(git branch 2>/dev/null | grep \* | cut -d " " -f 2)];\
 	fi;
 	DATE=[$(date +"%T")]
-PS1="$txtcyn\h $txtwht\W $txtgrn$DATE$txtred$ERRMSG \$ $txtrst";'
+PS1="$txtcyn\h $txtwht\W $txtgrn$DATE$txtred$ERRMSG \$ $txtrst$WINDOWTITLE";'
