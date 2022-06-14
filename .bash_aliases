@@ -13,6 +13,9 @@ function cd() {
 alias ls='ls -GFh'
 alias la='ls -A'
 
+# list network sockets
+alias sockets='sudo lsof -P -i -n'
+
 # git shortcuts
 alias gl='git log'
 alias ga='git add'
