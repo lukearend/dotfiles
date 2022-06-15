@@ -6,7 +6,7 @@ install-bash: git-completion.bash ## Install bash-related dotfiles.
 	cp $^ ~/.git-completion.bash
 	cp .bash_profile ~/.bash_profile
 	cp .bashrc ~/.bashrc
-	cp .bash_prompt ~/.bash_propmt
+	cp .bash_prompt ~/.bash_prompt
 	cp .bash_aliases ~/.bash_aliases
 
 install-vim: ## Install vimrc.
