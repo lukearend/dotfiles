@@ -11,7 +11,7 @@ txtpur='\[\e[0;35m\]' # purple
 txtcyn='\[\e[0;36m\]' # cyan
 txtwht='\[\e[0;37m\]' # white
 txtrst='\[\e[0m\]'    # text reset
-WINDOWTITLE='\033]0;${PWD##*/}\007'
+WINDOWTITLE='\[\033]0;${PWD##*/}\007\]'
 export PROMPT_COMMAND='RET=$?;\
 	BRANCH="";\
 	ERRMSG="";\
