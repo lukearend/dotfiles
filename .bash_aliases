@@ -19,6 +19,7 @@ alias sockets='sudo lsof -P -i -n'
 # git shortcuts
 alias gl='git log'
 alias ga='git add'
+alias gap='git add -p'
 alias gaa='git add .'
 alias gaaa='git add --all'
 alias gau='git add --update'
@@ -51,6 +52,9 @@ alias gpuu='git push -u'
 type __git_complete >/dev/null 2>&1 && {
     __git_complete gl   _git_log
     __git_complete ga   _git_add
+    __git_complete gap  _git_add
+    __git_complete gaa  _git_add
+    __git_complete gaaa _git_add
     __git_complete gau  _git_add
     __git_complete gb   _git_branch
     __git_complete gbr  _git_branch
