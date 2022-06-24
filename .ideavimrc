@@ -1,6 +1,8 @@
 let mapleader = " "
 nnoremap <SPACE> <Nop>
 
+vnoremap P "_dP
+
 imap jk <Esc>
 
 nmap E $
