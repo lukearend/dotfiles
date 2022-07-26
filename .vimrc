@@ -5,8 +5,8 @@ vnoremap P "_dP
 
 imap jk <Esc>
 
-nmap E $
-nmap Z i<Cr><Esc>
+vnoremap E $
+vnoremap Z i<Cr><Esc>
 
 set backspace=indent,eol,start
 noremap j gj
