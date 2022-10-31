@@ -8,6 +8,7 @@ install-bash: git-completion.bash ## Install bash-related dotfiles.
 	cp .bashrc ~/.bashrc
 	cp .bash_prompt ~/.bash_prompt
 	cp .bash_aliases ~/.bash_aliases
+	cp .bash_aliases_git ~/.bash_aliases_git
 
 install-vim: ## Install vimrc.
 	cp .vimrc ~/.vimrc
