@@ -2,6 +2,7 @@ alias gl='git log'
 alias ga='git add'
 alias gaa='git add .'
 alias gaaa='git add --all'
+alias gap='git add -p
 alias gau='git add --update'
 alias gb='git branch'
 alias gbr='git branch --remote'
@@ -27,6 +28,9 @@ alias gsta='git stash apply'
 alias gstl='git stash list'
 alias gpu='git push'
 alias gpuu='git push -u'
+alias gt='git tag'
+alias gtl='git tag -n'
+alias gtlr="git ls-remote --tags origin"
 
 type __git_complete >/dev/null 2>&1 && {
     __git_complete gl   _git_log
@@ -48,5 +52,6 @@ type __git_complete >/dev/null 2>&1 && {
     __git_complete gp   _git_pull
     __git_complete gr   _git_rebase
     __git_complete gs   _git_status
+    __git_complete gt   _git_tag
 }
 
