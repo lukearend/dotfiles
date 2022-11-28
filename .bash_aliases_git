@@ -19,7 +19,9 @@ alias gm='git merge'
 alias gf='git fetch'
 alias gsw='git switch'
 alias gp='git pull'
-alias gr='git rebase'
+alias gr='git reset'
+alias grh='git reset --hard'
+alias grb='git rebase'
 alias grbi='git rebase --interactive'
 alias grbl='git rebase --interactive HEAD~1'
 alias gs='git status'
@@ -50,7 +52,8 @@ type __git_complete >/dev/null 2>&1 && {
     __git_complete gm   _git_merge
     __git_complete gf   _git_fetch
     __git_complete gp   _git_pull
-    __git_complete gr   _git_rebase
+    __git_complete gr   _git_reset
+    __git_complete grb  _git_rebase
     __git_complete gs   _git_status
     __git_complete gt   _git_tag
 }
