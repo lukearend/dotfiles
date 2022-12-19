@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := help
 
-install: install-bash install-vim install-ideavim ## Install all dotfiles.
+install: install-bash install-vim install-karabiner install-ideavim ## Install all dotfiles.
 
 install-bash: git-completion.bash ## Install bash-related dotfiles.
 	cp $^ ~/.git-completion.bash
@@ -10,11 +10,14 @@ install-bash: git-completion.bash ## Install bash-related dotfiles.
 	cp .bash_aliases ~/.bash_aliases
 	cp .bash_aliases_git ~/.bash_aliases_git
 
-install-vim: ## Install vimrc.
+install-vim: ## Install vim configuration.
 	cp .vimrc ~/.vimrc
 
-install-ideavim: ## Install ideavim.
+install-ideavim: ## Install ideavim configuration.
 	cp .ideavimrc ~/.ideavimrc
+
+install-karabiner: ## Install karabiner configuration.
+        cp karabiner.json ~/.config/karabiner/karabiner.json
 
 help: ## Print this help.
 	@grep -E '^[0-9a-zA-Z%_-]+:.*?## .*$$' $(firstword $(MAKEFILE_LIST)) | \
