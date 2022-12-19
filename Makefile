@@ -17,7 +17,7 @@ install-ideavim: ## Install ideavim configuration.
 	cp .ideavimrc ~/.ideavimrc
 
 install-karabiner: ## Install karabiner configuration.
-        cp karabiner.json ~/.config/karabiner/karabiner.json
+	cp karabiner.json ~/.config/karabiner/karabiner.json
 
 help: ## Print this help.
 	@grep -E '^[0-9a-zA-Z%_-]+:.*?## .*$$' $(firstword $(MAKEFILE_LIST)) | \
