@@ -1325,7 +1325,35 @@
                         ]
                     },
                     {
-                        "description": "Make f-keys act perform special functions when combined with virtual fn key",
+                        "description": "Change fn+backspace to delete_forward",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "fn_modifier",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "delete_or_backspace",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_forward"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Make f-keys perform special functions when combined with virtual fn key",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1606,7 +1634,7 @@
                         ]
                     },
                     {
-                        "description": "Change right_command+hjkl to vim-style arrow keys",
+                        "description": "Change right_command+hjkl to arrow keys",
                         "manipulators": [
                             {
                                 "from": {
