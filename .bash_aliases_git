@@ -33,6 +33,7 @@ alias gpuu='git push -u'
 alias gt='git tag'
 alias gtl='git tag -n'
 alias gtlr='git ls-remote --tags origin'
+alias gtd='git tag --delete'
 
 type __git_complete >/dev/null 2>&1 && {
     __git_complete gl   _git_log
@@ -56,5 +57,5 @@ type __git_complete >/dev/null 2>&1 && {
     __git_complete grb  _git_rebase
     __git_complete gs   _git_status
     __git_complete gt   _git_tag
+    __git_complete gtd  _git_tag
 }
-
